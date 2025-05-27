@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# MovieGuesser
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Jogo para adivinhar filmes a partir de posters borrados. A cada tentativa errada, o poster fica mais nítido.
 
-## Available Scripts
+## Instalação
 
-In the project directory, you can run:
+### Frontend
+```bash
+# Instale as dependências
+npm install
 
-### `npm start`
+# Inicie o servidor
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Backend
+```bash
+# Crie e ative o ambiente virtual
+python -m venv venv
+venv\Scripts\activate  # Windows
+source venv/bin/activate  # Linux/Mac
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Instale as dependências
+pip install -r requirements.txt
 
-### `npm test`
+# Configure a chave da API do TMDB
+# Crie um arquivo .env na raiz do projeto com:
+TMDB_API_KEY=sua_chave_api_aqui
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Inicie o servidor
+python main.py
+```
 
-### `npm run build`
+## Como Jogar
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. O jogo começa com o poster do filme borrado
+2. Você tem 3 tentativas para adivinhar
+3. A cada erro, o poster fica mais nítido
+4. Se acertar, você ganha pontos
+5. Se errar todas as tentativas, o filme é revelado
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tecnologias
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Frontend: React, TypeScript, Material UI
+- Backend: Python, Flask, TMDB API 
